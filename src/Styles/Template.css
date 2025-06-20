@@ -1,0 +1,75 @@
+.landing .container {
+    padding: 20px 60px 0;
+}
+
+.projects {
+    border: 1px solid rgba(108, 108, 108, 0.5);
+    border-radius: 40px;
+    background-color: rgba(108, 108, 108, 0.5);
+    color: var(--white-color);
+}
+
+.projects .main-table {
+    overflow-x: auto;
+}
+
+.projects .table {
+    min-width: 1000px;
+    border-spacing: 0px;
+    font-weight: 700;
+    width: 100%;
+}
+
+
+.projects .table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+
+.projects .table td:last-child {
+    border-left: none;
+}
+
+.projects .table .label {
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.projects .table .label:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}

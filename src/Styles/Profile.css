@@ -1,0 +1,142 @@
+.landing .container-profile {
+    padding: 20px 50px;
+}
+
+@media (max-width: 991px) {
+    .landing .container-profile {
+        padding: 20px 40px;
+    }
+}
+
+.landing .profile,
+.landing .info {
+    font-size: 18px;
+}
+
+@media (max-width: 991px) {
+    .landing .profile,
+    .landing .info {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing .profile,
+    .landing .info {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing .profile .profile-title,
+    .landing .info .info-title {
+        text-align: center;
+        margin: 20px 0px;
+    }
+}
+
+.landing .profile .profile-card,
+.landing .info .info-card {
+    background-color: var(--white-color);
+    border: 0.2px solid #939393;
+    box-shadow: 0px 0px 7px 0px #00000040;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.landing .profile .profile-card {
+    padding: 23px 16px;
+}
+
+@media (max-width: 991px) {
+    .landing .profile .profile-card {
+        margin: 15px 0;
+        padding: 18px 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing .profile .profile-card {
+        flex-direction: column;
+        justify-content: center;
+        height: 250px;
+    }
+}
+
+.landing .profile .profile-card img {
+    width: 80px;
+    height: 80px;
+}
+
+@media (max-width: 991px) {
+    .landing .profile .profile-card img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing .profile .profile-card img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.landing .profile .profile-card h3 {
+    margin: 0 20px;
+}
+
+@media (max-width: 991px) {
+    .landing .profile .profile-card h3 {
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing .profile .profile-card h3 {
+        margin: 15px 0;
+    }
+}
+
+.landing .profile .profile-card span {
+    color: #9C9C9C;
+}
+
+.landing .info .info-card {
+    padding: 65px;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+@media (max-width: 767px) {
+    .landing .info .info-card {
+        flex-direction: column;
+        padding: 23px;
+        font-size: 20px;
+        flex-wrap: nowrap;
+    }
+}
+
+.landing .info .info-card .info-item {
+    flex: 1 1 45%;
+    min-width: 200px;
+    margin: 20px 0;
+}
+
+
+.landing .info .info-card .info-item label {
+    color: #9C9C9C;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.landing .container-profile .profile-logout {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.landing .container-profile .profile-logout .links:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}

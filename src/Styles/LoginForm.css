@@ -1,0 +1,101 @@
+.login-container {
+  min-height: 100vh;
+  gap: 32px;
+}
+
+.login-container .login-form-wrapper {
+  padding: 32px;
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+    .login-container .login-form-wrapper {
+      width: 100%;
+      flex: none;
+    }
+}
+
+.login-container .login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.login-container .login-title {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.login-container .error-login {
+  color: red;
+  margin-bottom: 10px;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-container .form-group {
+  gap: 12px;
+}
+
+.login-container .form-label {
+  color: white;
+  text-align: right;
+}
+
+.login-container .form-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #e5e7eb;
+  color: #333;
+  font-size: 16px;
+  text-align: right;
+  border: none;
+}
+
+.login-container .form-input:focus {
+  outline: none;
+}
+
+.login-container .submit-button {
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.login-container .submit-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container .submit-button:disabled {
+  background-color: #7DA6D7;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.login-container .login-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+}
+
+.login-container .login-image {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+    .login-container .login-image {
+      display: none;
+    }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

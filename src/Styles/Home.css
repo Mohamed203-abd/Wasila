@@ -1,0 +1,20 @@
+.home-container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.entity-section, .upload-section {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.divider {
+  width: 2px;
+  background-color: #ddd;
+  height: 100%;
+}

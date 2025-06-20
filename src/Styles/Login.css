@@ -1,0 +1,18 @@
+.login-landing {
+    min-height: 100vh;
+    background-image: url(../assets/images/pg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.login-landing .overlay {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(50, 131, 229, 0.9);
+    background-image: linear-gradient(to bottom, #3283e5 87%, #00bbde40);
+    opacity: 0.9;
+}

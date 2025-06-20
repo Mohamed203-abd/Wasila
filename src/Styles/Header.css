@@ -1,0 +1,54 @@
+.header {
+  box-shadow: 0px 4px 48.2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.header .container {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+@media (max-width: 991px) {
+  .header .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header .title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .title {
+    font-size: 1rem;
+  }
+}
+
+.header .logo,
+.header .university-logo {
+  object-fit: contain;
+}
+
+@media (max-width: 991px) {
+  .header .university-logo{
+    width: 135px;
+    height: 55px;
+  }
+  .header .logo {
+    width: 120px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .university-logo{
+    width: 85px;
+    height: 35px;
+  }
+  .header .logo{
+    width: 70px;
+    height: 35px;
+  }
+}

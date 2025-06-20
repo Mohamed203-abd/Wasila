@@ -1,0 +1,126 @@
+.upload-content {
+  gap: 32px;
+  padding: 20px 60px;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .upload-content {
+    flex-direction: column;
+  }
+}
+
+.upload-content .upload-details-form {
+  gap: 16px;
+  flex: 1;
+}
+
+.upload-content .upload-field {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.upload-content .upload-label {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 20px;
+  width: 100px;
+}
+
+.upload-content .upload-input,
+.upload-content .upload-select {
+  flex: 1;
+  height: 48px;
+  padding: 0 12px;
+  width: 100%;        
+  min-width: 0;         
+  max-width: 100%;
+  border-radius: 8px;
+  background-color: rgba(180, 180, 180, 0.5);
+  border: none;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+}
+
+.upload-content .upload-select {
+  background: url(../assets/images/arrow.png) no-repeat right center;
+  background-size: 40px;
+  padding-right: 40px;
+  appearance: none;
+  background-color: rgba(180, 180, 180, 0.5);
+}
+
+.upload-content .file-btn-wrapper {
+  gap:8px;
+  flex: 1;
+  height: 48px;
+  padding: 0 12px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  border-radius: 8px;
+  background-color: rgba(180, 180, 180, 0.5);
+  border: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.upload-content .file-btn-wrapper input[type=file]{
+  position:absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none; ;    
+}
+
+.upload-content .btn-file {
+  background: linear-gradient(90.03deg, #2E8DFF 0.02%, #7DA6D7 116.31%);
+  color:#fff;
+  border:none;
+  padding:6px 14px;
+  border-radius:6px;
+}
+
+.upload-content .file-name {
+  font-size:0.9rem;
+  color:#555;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:200px;
+}
+
+.upload-content .card {
+  gap: 24px;
+  flex: 1;
+}
+
+.upload-content .card .upload-image {
+  width: 297px;
+  height: 296px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 4px 42.2px 0px rgba(0, 0, 0, 0.12);
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+@media (max-width: 991px) {
+  .upload-content .card .upload-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.upload-content .card .text {
+  position: static;
+  bottom: auto;
+}
+
+.upload-content .card .text .links:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
