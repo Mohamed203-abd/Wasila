@@ -22,7 +22,8 @@ function Entity() {
         <Landing>
             <EntityGrid entity={entityItems} onSelect={handleSelect} />
             <button
-                className="floating-upload-button" onClick={() => navigate('/upload')}> 📤 رفع مستند
+                className="floating-upload-button c-pointer" 
+                onClick={() => navigate('/upload')}> 📤 رفع مستند
             </button>
         </Landing>
     );

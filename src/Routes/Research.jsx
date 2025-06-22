@@ -3,11 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faMagnifyingGlass, faSliders,
   faFilePdf,  faFileImage,  faFileWord,  faFileExcel,  faFileAlt,
-  faExternalLinkAlt, faArrowUp, faArrowDown,
+  faExternalLinkAlt, faArrowUp, faArrowDown, faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
+
 import '../Styles/Research.css';
-import Filters      from '../Routes/Filters';
+import Filters      from '../Components/Filters';
 import { getFullFileUrl } from '../utils';
 import Landing      from '../Components/Landing';
 import AISearch     from '../Components/AISearch';
@@ -57,18 +58,18 @@ function SearchResultItem({ item, query, searchType }){
 
   return(
     <li className="result-item full-details">
-      <div className="main-info">
+      <div className="main-info flex-between wrap">
         <FontAwesomeIcon icon={icon} className="file-icon large" style={{color}}/>
         <div className="file-name"><strong>اسم الملف:</strong> {item.title||'—'}</div>
 
         {finalFileLink && (
           <a href={finalFileLink} target="_blank" rel="noopener noreferrer"
-            className="open-file-button">
+            className="open-file-button c-pointer">
             <FontAwesomeIcon icon={faExternalLinkAlt}/> فتح الملف
           </a>
         )}
 
-        <button className="toggle-details-button"
+        <button className="toggle-details-button c-pointer"
                 onClick={()=>setShowDetails(p=>!p)}>
           {showDetails?'إخفاء التفاصيل':'عرض التفاصيل'}
         </button>
@@ -121,13 +122,13 @@ function Research(){
   /* --- render --- */
   return(
     <Landing>
-      <div className="search-page-container p-relative">
+      <div className="search-container p-relative">
 
         {/* --- tabs --- */}
-        <div className="tabs-container" style={{display:'flex',marginBottom:15}}>
+        <div className="tabs-container d-flex">
           {['ai','custom'].map(t=>(
             <button key={t}
-              className={`tab-btn ${activeTab===t?'active':''}`}
+              className={`tab-btn c-pointer ${activeTab===t?'active':''}`}
               style={t==='custom'?{marginLeft:10}:{}}
               onClick={()=>{
                 setActiveTab(t);
@@ -140,7 +141,7 @@ function Research(){
         </div>
 
         {/* --- search bar --- */}
-        <div className="search-bar">
+        <div className="search-bar d-flex align-center wrap">
           <FontAwesomeIcon icon={faMagnifyingGlass} className="icon"/>
           <input
             type="text" placeholder="ابحث عن مستند..."
@@ -155,22 +156,22 @@ function Research(){
           />
           {/* Clear */}
           {query && (
-            <button className="clear-btn" title="مسح"
+            <button className="clear-btn c-pointer" title="مسح"
               onClick={()=>{ setQuery(''); setResults([]); setError(''); }}>
-              ✕
+              <FontAwesomeIcon icon={faTimes} />
             </button>
           )}
 
           {/* custom-only controls */}
           {activeTab==='custom' && (
             <>
-              <select className="field-select"
+              <select className="field-select c-pointer"
                       value={searchField}
                       onChange={e=>setSearchField(e.target.value)}>
                 <option value="title">العنوان</option>
                 <option value="document_number">رقم المستند</option>
               </select>
-              <button className="settings-button" title="خيارات التصفية"
+              <button className="settings-button c-pointer" title="خيارات التصفية"
                       onClick={()=>setShowFilters(true)}>
                 <FontAwesomeIcon icon={faSliders}/>
               </button>
@@ -186,7 +187,7 @@ function Research(){
         </div>
 
         {/* --- action buttons (لمن يريد الضغط اليدوي) --- */}
-        <div className="search-buttons">
+        <div className="research-buttons">
           {activeTab==='ai'     && <AISearch.Button onClick={runSearch}/>}
           {activeTab==='custom' && <CustomSearch.Button onClick={runSearch}/>}
         </div>

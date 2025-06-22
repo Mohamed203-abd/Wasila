@@ -37,7 +37,7 @@ async function run({ query, filters, searchField,
 /* ❷ زرّ يدوي */
 export function CustomSearchButton({ onClick }) {
   return (
-    <button id="custom-btn" className="custom-search-button" onClick={onClick}>
+    <button id="custom-btn" className="custom-search-button c-pointer" onClick={onClick}>
       <FontAwesomeIcon icon={faFileAlt}/> بحث مخصّص
     </button>
   );

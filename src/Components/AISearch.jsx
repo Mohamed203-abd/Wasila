@@ -23,7 +23,7 @@ async function run({ query, setLoading, setError, setResults }) {
 /* ❷ زرّ مستقل (لمن يفضل الضغط اليدوي) */
 export function AISearchButton({ onClick }) {
   return (
-    <button id="ai-btn" className="ai-search-button" onClick={onClick}>
+    <button id="ai-btn" className="ai-search-button c-pointer" onClick={onClick}>
       <FontAwesomeIcon icon={faRobot}/> بحث بالذكاء الاصطناعي
     </button>
   );

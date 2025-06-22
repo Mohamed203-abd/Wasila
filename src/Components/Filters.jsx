@@ -21,15 +21,15 @@ function Filters({ onClose, onApply }) {
     setClosing(true);
     setTimeout(() => {
       onClose();
-    }, 300); // نفس مدة الأنيميشن
+    }, 300);
   };
 
   return (
-    <div className="filters-overlay" onClick={handleOverlayClick}>
-      <div className={`filters-modal ${closing ? 'fade-out' : ''}`}>
-        <div className="modal-header">
+    <div className="filters-overlay d-flex-c" onClick={handleOverlayClick}>
+      <div className={`filters-modal p-relative ${closing ? 'fade-out' : ''}`}>
+        <div className="modal-header flex-between">
           <h3>خيارات التصفية</h3>
-          <button className="close-button" onClick={closeWithAnimation}>×</button>
+          <button className="close-button c-pointer" onClick={closeWithAnimation}>×</button>
         </div>
 
         <div className="filters-content">
@@ -37,8 +37,8 @@ function Filters({ onClose, onApply }) {
             <label>نوع الجهة</label>
             <select value={entityType} onChange={(e) => setEntityType(e.target.value)}>
               <option value="">الكل</option>
-  <option value="جهة داخلية">داخلية</option>
-  <option value="جهة خارجية">خارجية</option>
+              <option value="جهة داخلية">داخلية</option>
+              <option value="جهة خارجية">خارجية</option>            
             </select>
           </div>
 
@@ -51,7 +51,7 @@ function Filters({ onClose, onApply }) {
             </select>
           </div>
 
-          <button className="apply-button" onClick={handleApply}>تطبيق</button>
+          <button className="apply-button c-pointer" onClick={handleApply}>تطبيق</button>
         </div>
       </div>
     </div>

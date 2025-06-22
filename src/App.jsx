@@ -10,7 +10,7 @@ import Management from './Routes/Management';
 import Template from './Routes/Template';
 import Upload from './Routes/Upload';
 import Profile from './Routes/Profile';
-import Filters from "./Routes/Filters";
+import Filters from "./Components/Filters";
 import Research from "./Routes/Research";
 import Contact from "./Routes/Contact";
 

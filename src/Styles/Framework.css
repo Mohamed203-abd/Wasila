@@ -87,7 +87,7 @@
     background: linear-gradient(90.03deg, #2E8DFF 0.02%, #7DA6D7 116.31%);
     border-radius: 40px;
     width: 227px;
-    color: #FFFFFF;
+    color: var(--white-color);
     height: 53px;
     border: none;
     cursor: pointer;
