@@ -96,3 +96,28 @@
 .filters-modal.fade-out {
   animation: fadeOut 0.3s ease-in-out forwards;
 }
+
+
+.search-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.ai-search-button,
+.custom-search-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ai-search-button:hover,
+.custom-search-button:hover {
+  background-color: #357ABD;
+}

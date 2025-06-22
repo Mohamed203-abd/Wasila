@@ -12,6 +12,7 @@ import Upload from './Routes/Upload';
 import Profile from './Routes/Profile';
 import Filters from "./Routes/Filters";
 import Research from "./Routes/Research";
+import Contact from "./Routes/Contact";
 
 function App() {
   const location = useLocation();
@@ -39,16 +40,16 @@ function App() {
       {isAuthenticated}
       <Nav />
       <Routes>
-        <Route path='/' element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-        <Route path="/entity" element={<Entity />} />
-        <Route path="/:category" element={<Categories />} />
-        <Route path="/departments/:id" element={<Departments />} />
-        <Route path="/management" element={<Management />} />
-        <Route path="/template" element={<Template />} />
-        <Route path="/upload" element={<Upload />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/searchpage" element={<Filters />} />
-        <Route path="/filters" element={<Research />} />
+          <Route path="/entity" element={<Entity />} />
+          <Route path="/:category" element={<Categories />} />
+          <Route path="/departments/:id" element={<Departments />} />
+          <Route path="/management" element={<Management />} />
+          <Route path="/template" element={<Template />} />
+          <Route path="/upload" element={<Upload />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/searchpage" element={<Filters />} />
+          <Route path="/research" element={<Research />} />
+          <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );

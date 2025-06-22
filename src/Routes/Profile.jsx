@@ -69,16 +69,8 @@ function Profile() {
             <h2 className='info-title'>المعلومات الشخصية</h2>
             <div className="info-card d-flex wrap">
               <div className='info-item'>
-                <label>الاسم الأول</label>
+                <label>الاسم</label>
                 <p>{user.username || "-"}</p>
-              </div>
-              <div className='info-item'>
-                <label>الاسم الثاني</label>
-                <p>{user.last_name || "-"}</p>
-              </div>
-              <div className='info-item'>
-                <label>الرقم القومي</label>
-                <p>{user.id || "غير متوفر"}</p>
               </div>
               <div className='info-item'>
                 <label>البريد الإلكتروني</label>

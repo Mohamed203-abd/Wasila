@@ -18,6 +18,20 @@ function ArchiveUpload() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
+    const resetForm = () => {
+    setFile(null);
+    setFileName("— لم يتم اختيار ملف —");
+    setTitle("");
+    setDocNumber("");
+    setNotes("");
+    setDocType("");
+    setEntityType("");
+    setEntityId("");
+    setDeptId("");
+    setEntityOptions([]);
+    setDeptOptions([]);
+};
+
 
     useEffect(() => {
         if (!entityType) {
@@ -89,6 +103,7 @@ function ArchiveUpload() {
             setLoading(true);
             await apiFetch("/documents/", { method: "POST", body: formData });
             setSuccess("تم رفع المستند بنجاح!");
+            resetForm();
         } catch (err) {
             setError(err.message || "فشل رفع المستند");
         } finally {
