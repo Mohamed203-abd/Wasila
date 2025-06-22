@@ -48,21 +48,18 @@ function Landing({ children, showSearch = false, searchData = [], onFilter }) {
     };
 
     return (
-        <div className="landing p-relative">
+        <div className={`landing p-relative${isTemplatePage ? " no-menu-margin" : ""}`}>
             <div className="overlay p-absolute"></div>
             {!isResearchPage && (
                 <div className={`head ${showSearch ? "head-search" : ""} p-relative d-flex-c`}>
                     {!isResearchPage && showSearch && <Search data={searchData} onFilter={onFilter} />}
                     <div className="icons d-flex-c c-pointer p-absolute">
-
-                        {!isTemplatePage && (
                             <img
                                 src={myprofile}
                                 onClick={() => handleNavigate("/profile")}
                                 title="الملف الشخصي"
                                 className={`face p-relative d-flex-c b-radius ${showSearch ? "img-search" : ""}`}
                             />
-                        )}
                         <div className="menu-container" ref={menuRef}>
                             <div className={`menu-trigger ${open ? "open" : "closed"}`} 
                                 onClick={() => setOpen(!open)}>

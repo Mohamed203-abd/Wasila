@@ -66,6 +66,12 @@
     transition: var(--transition);
 }
 
+@media (max-width: 767px) {
+    .landing.no-menu-margin .icons .menu-trigger {
+        margin-right: 0 !important;
+    }
+}
+
 .landing .icons .menu-trigger.open {
     background-color: #333;
     border-radius: 50%;
