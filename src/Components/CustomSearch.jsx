@@ -2,13 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileAlt }       from '@fortawesome/free-solid-svg-icons';
 import { apiFetch }        from '../api';
 
-async function run({ query, filters, searchField,
-                    setLoading, setError, setResults }) {
+async function run({ query, filters, searchField, setLoading, setError, setResults }) {
 
-  if (!filters) {
-    setError('يجب تطبيق الفلاتر أولًا قبل البحث المخصَّص.');
-    setResults([]); return;
-  }
   if (!query.trim()) {
     setError('يرجى إدخال نص للبحث.');
     setResults([]); return;
@@ -17,11 +12,14 @@ async function run({ query, filters, searchField,
   try {
     setError(''); setLoading(true); setResults([]);
 
+    const fileType = filters?.fileType || '';
+    const entityType = filters?.entityType || '';
+
     const params = new URLSearchParams({
       limit: 200,
-      document_type:  filters.fileType   || '',
-      entity_type:    filters.entityType || '',
-      title:          searchField==='title'           ? query.trim() : '',
+      document_type:  fileType,  
+      entity_type:    entityType,
+      title: searchField === 'title' ? query.trim() : '',
       document_number:searchField==='document_number'? query.trim() : '',
     });
 

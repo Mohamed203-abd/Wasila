@@ -168,8 +168,8 @@ function Research(){
               <select className="field-select c-pointer"
                       value={searchField}
                       onChange={e=>setSearchField(e.target.value)}>
-                <option value="title">العنوان</option>
-                <option value="document_number">رقم المستند</option>
+                <option value="title">بالاسم</option>
+                <option value="document_number">بالرقم</option>
               </select>
               <button className="settings-button c-pointer" title="خيارات التصفية"
                       onClick={()=>setShowFilters(true)}>
