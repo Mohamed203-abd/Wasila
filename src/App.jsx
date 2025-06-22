@@ -40,6 +40,7 @@ function App() {
       {isAuthenticated}
       <Nav />
       <Routes>
+          <Route path="/" element={<Login />} />
           <Route path="/entity" element={<Entity />} />
           <Route path="/:category" element={<Categories />} />
           <Route path="/departments/:id" element={<Departments />} />
