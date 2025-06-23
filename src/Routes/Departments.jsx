@@ -6,7 +6,7 @@ import Masks from "../assets/images/Masks.png";
 import { apiFetch } from "../api";
 
 function Departments() {
-    const { id } = useParams(); // entityId
+    const { id } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
 

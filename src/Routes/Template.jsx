@@ -125,6 +125,8 @@ function Template() {
                     docsToShow.map((doc) => {
                       const fullFileUrl = getFullFileUrl(doc.file);
                       console.log("🔗 Full file URL:", fullFileUrl);
+                      console.log(doc.file);
+
                       return (
                         <tr key={doc.id}>
                           <td>{doc.document_number}</td>

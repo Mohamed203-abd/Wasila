@@ -1,5 +1,5 @@
-import '../Styles/GridDashboard.css';
 import { useNavigate } from 'react-router-dom';
+import '../Styles/GridDashboard.css';
 
 function EntityGrid({ entity = [], onSelect }) {
     const navigate = useNavigate();
@@ -11,8 +11,6 @@ function EntityGrid({ entity = [], onSelect }) {
             navigate(item.path);
         }
     };
-
-    
 
     return (
         <div className="content p-relative c-pointer d-flex-around wrap">

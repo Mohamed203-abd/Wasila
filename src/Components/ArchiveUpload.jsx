@@ -166,8 +166,6 @@ function ArchiveUpload() {
 
                 <TextInput lbl="ملاحظات" value={notes} set={setNotes} />
 
-                {error && <p className="error-message">{error}</p>}
-                {success && <p className="success-message">{success}</p>}
             </div>
 
             <div className="card d-flex align-center col ">
@@ -179,7 +177,9 @@ function ArchiveUpload() {
                         <button className="links d-flex-c button" disabled={loading}>
                             {loading ? "جارى الرفع..." : "رفع الملف"}
                         </button>
-                    </div>
+                </div>
+                {error && <p className="error-message">{error}</p>}
+                {success && <p className="success-message">{success}</p>}
             </div>
         </form>
     );
